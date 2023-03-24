@@ -1,0 +1,49 @@
+{
+  "name": "Commutateur ON/OFF simple charge 16A PRO",
+  "ref" : "SIN-4-1-20_PRO",
+  "manufacturer": "NodOn",
+  "type": "Contacteur",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5585-nodon-pro-module-multifonction-zigbee-3700313925256.html?domid=4&id_campaign=9",
+  "config" : [
+    {"endpoint" : "1","cluster":6,"attribute":1,"manufacturer":4747,"name":"Temps impulsion en ms","type":"number","min":0,"max":5000}
+  ],
+  "commands": [
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "ENERGY_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::6::0"
+    },
+    {
+      "name": "On",
+      "generic_type": "ENERGY_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "1::on_off::on",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Off",
+      "generic_type": "ENERGY_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "1::on_off::off",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    }
+  ]
+}

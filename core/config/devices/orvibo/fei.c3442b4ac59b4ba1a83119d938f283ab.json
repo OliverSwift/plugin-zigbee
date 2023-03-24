@@ -1,0 +1,25 @@
+{
+  "name": "Smoke detector",
+  "buylink" : "",
+  "remark" : "",
+  "ref":"SF30",
+  "pairing" : "Presser le bouton pendant 5 à 10s",
+  "commands": [
+    {
+      "name": "Fumée",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1280::cmd::1",
+      "generic_type": "SMOKE",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "template":{
+        "dashboard" : "heat",
+        "mobile" : "heat"
+      }
+    }
+  ]
+}

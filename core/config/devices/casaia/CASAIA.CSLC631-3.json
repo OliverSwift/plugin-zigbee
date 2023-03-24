@@ -1,0 +1,123 @@
+{
+  "name": "Module triple relais Zigbee",
+  "ref" : "CSLC-631-3",
+  "type": "Contacteur",
+  "reset": "Appuyez sur le bouton “Reset” et maintenez-le enfoncé pendant six à dix secondes. Le voyant LED clignotera trois fois pour signaler que le module aura restauré les paramètres d'usine par défaut.",
+  "pairing": "Automatique à la mise sous tension, ou appui de 3 secondes sur le bouton reset",
+  "remark": "",
+  "documentation": "https://casaia.fr/product/module-triple-relais-zigbee/?attachment_id=2518&download_file=c2digfwrhtylk",
+  "buylink": "https://www.domadoo.fr/fr/peripheriques/5577-casaia-module-triple-relais-zigbee-3770021021151.html",
+  "commands": [
+    {
+      "name": "Etat 1",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "ENERGY_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "16::6::0"
+    },
+    {
+      "name": "On 1",
+      "generic_type": "ENERGY_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 1",
+      "logicalId": "16::on_off::on",
+      "template":{
+        "dashboard" : "prise",
+        "mobile" : "prise"
+      }
+    },
+    {
+      "name": "Off 1",
+      "generic_type": "ENERGY_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 1",
+      "logicalId": "16::on_off::off",
+      "template":{
+        "dashboard" : "prise",
+        "mobile" : "prise"
+      }
+    },
+    {
+      "name": "Etat 2",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "ENERGY_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "17::6::0"
+    },
+    {
+      "name": "On 2",
+      "generic_type": "ENERGY_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 2",
+      "logicalId": "17::on_off::on",
+      "template":{
+        "dashboard" : "prise",
+        "mobile" : "prise"
+      }
+    },
+    {
+      "name": "Off 2",
+      "generic_type": "ENERGY_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 2",
+      "logicalId": "17::on_off::off",
+      "template":{
+        "dashboard" : "prise",
+        "mobile" : "prise"
+      }
+    },
+    {
+      "name": "Etat 3",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "ENERGY_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "18::6::0"
+    },
+    {
+      "name": "On 3",
+      "generic_type": "ENERGY_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 3",
+      "logicalId": "18::on_off::on",
+      "template":{
+        "dashboard" : "prise",
+        "mobile" : "prise"
+      }
+    },
+    {
+      "name": "Off 3",
+      "generic_type": "ENERGY_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 3",
+      "logicalId": "18::on_off::off",
+      "template":{
+        "dashboard" : "prise",
+        "mobile" : "prise"
+      }
+    }
+  ]
+}

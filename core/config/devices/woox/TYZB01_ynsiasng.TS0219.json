@@ -1,0 +1,38 @@
+{
+  "name": "Sirène intelligente avec LED",
+  "ref" : "R7051",
+  "manufacturer": "Woox",
+  "type": "Sirène",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5682-woox-sirene-interieure-intelligente-zigbee-30-8435606701105.html",
+  "reset" : "",
+  "pairing" : "Maintenir appuyé 5 secondes le bouton reset jusqu'au clignotement de la LED",
+  "configuration" : {
+    "dontAwaitCmd" : 1
+  },
+  "commands": [
+    {
+      "name": "Off",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::ias_wd::start_warning::0::0::0::1::1::1",
+      "configuration" : {
+        "minValue":"1",
+        "maxValue":"9"
+      }
+    },
+    {
+      "name": "On",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::ias_wd::start_warning::1::1::1::1::1::1",
+      "configuration" : {
+        "minValue":"1",
+        "maxValue":"9"
+      }
+    }
+  ]
+}

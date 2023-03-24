@@ -1,0 +1,59 @@
+{
+  "name": "Module ON/OFF",
+  "ref": "SR-ZG9100A",
+  "type": "Contacteur,Lumière",
+  "reset": "Appuyer 5 fois rapidement sur le bouton Reset",
+  "pairing": "Couper l'alimentation du module, puis le ré-alimenter pour qu'il entre en mode appairage",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5242-sunricher-module-onoff-zigbee-30.html",
+  "commands": [
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "LIGHT_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::6::0"
+    },
+    {
+      "name": "On",
+      "generic_type": "LIGHT_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "1::on_off::on",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Off",
+      "generic_type": "LIGHT_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "1::on_off::off",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Toggle",
+      "generic_type": "LIGHT_TOGGLE",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::on_off::toggle",
+      "display": {
+        "icon": "<i class=\"fas fa-random\"></i>"
+      }
+    }
+  ]
+}

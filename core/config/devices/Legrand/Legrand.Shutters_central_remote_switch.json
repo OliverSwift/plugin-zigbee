@@ -1,0 +1,20 @@
+{
+  "name": "Commande sans fil pour volet roulant",
+  "remark" : "Ne peut etre appairé que sur le canal 11",
+  "ref":"067646/067647/064897",
+  "buylink" : "",
+  "commands": [
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::258::cmd::0",
+      "generic_type": "FLAP_STATE",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "name": "Sirène intelligente",
+  "ref" : "WarningDevice-EF-3.0",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5714-heiman-sirene-interieure-intelligente-zigbee-30.html?domid=4&id_campaign=9",
+  "manufacturer" : "Heiman",
+  "pairing": "Branchez la sirène",
+  "reset": "Appuyez sur le bouton jusqu'à ce que la led clignote rouge",
+  "commands": [
+     {
+            "logicalId": "durationstate",
+            "name": "Etat durée",
+            "type": "info",
+            "subType": "numeric",
+            "isHistorized": "0",
+            "unite": "Sec",
+            "configuration": {
+                "minValue": "0",
+                "maxValue": "65535"
+            },
+            "template": {
+                "dashboard": "default",
+                "mobile": "default"
+            },
+            "value": "Etat durée",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "duration",
+            "name": "Durée",
+            "type": "action",
+            "subType": "slider",
+            "isHistorized": "0",
+            "configuration": {
+                "minValue": "0",
+                "maxValue": "65535"
+            },
+            "template": {
+                "dashboard": "default",
+                "mobile": "default"
+            },
+            "value": "Etat durée",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "#select#",
+            "name": "Mode",
+            "type": "action",
+            "subType": "select",
+            "isHistorized": "0",
+            "configuration": {
+                "listValue": "1::ias_wd::start_warning::1::1::2::#duration#::2::0|Son ON, Led ON ; 1::ias_wd::start_warning::1::0::2::#duration#::2::0| Son ON, Led OFF ; 1::ias_wd::start_warning::0::1::0::#duration#::2::0|Son OFF, Led ON ; 1::ias_wd::start_warning::0::0::0::#duration#::2::0| Son OFF, Led OFF |"
+            },
+            "template": {
+                "dashboard": "default",
+                "mobile": "default"
+            },
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "1::ias_wd::start_warning::0::0::0::1::1::1",
+            "name": "Arrêt",
+            "type": "action",
+            "subType": "other",
+            "isHistorized": "0",
+            "configuration": {
+                "minValue": "1",
+                "maxValue": "9"
+            },
+            "template": {
+                "dashboard": "default",
+                "mobile": "default"
+            },
+            "isVisible": "1"
+        }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Telecommande 4 boutons",
+  "ref" : "HS2SS-E",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5715-heiman-telecommande-de-scenes-zigbee.html?domid=4&id_campaign=9",
+  "remark" : "",
+  "reset" : "",
+  "pairing" : "",
+  "commands": [
+    {
+      "name": "Bouton",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::64640::cmd::0",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

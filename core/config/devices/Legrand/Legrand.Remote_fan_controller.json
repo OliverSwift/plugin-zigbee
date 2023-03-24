@@ -1,0 +1,31 @@
+{
+  "name": "Interrupteur pour ventilateur",
+  "ref" : "067762",
+  "remark" : "Ne peut etre appairé que sur le canal 11",
+  "buylink" : "",
+  "commands": [
+    {
+      "name": "Vitesse",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "ENERGY_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::6::cmd::0",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Appui long",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::8::cmd::1",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

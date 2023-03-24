@@ -1,0 +1,135 @@
+{
+  "name": "MOES - Tête thermostatique intelligente (3)",
+  "ref" : "ZTRV-BY-100-WH-FR",
+  "manufacturer" : "Moes",
+  "buylink" : "https://www.domadoo.fr/fr/tetes-thermostatiques/5783-moes-tete-thermostatique-intelligente-zigbee-30-blanc.html",
+  "documentation" : "",
+  "reset": "Pas besoin de reinitialisation sur ce module",
+  "pairing": "Appuie long sur le bouton Maison jusqu'a avoir le menu, puis avec le plus aller sur l'icone wifi, validez avec le bouton home puis appuie long sur le bouton home jusqu'a avoir l'icone wifi qui clignote",
+  "commands": [
+    {
+      "name": "Température",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "unite" : "°C",
+      "logicalId": "1::513::0",
+      "generic_type" : "THERMOSTAT_TEMPERATURE",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    },
+    {
+      "name": "Consigne",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "unite" : "°C",
+      "logicalId": "1::513::18",
+      "generic_type" : "THERMOSTAT_SETPOINT",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    },
+    {
+      "name": "Temperature mode eco",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "unite" : "°C",
+      "logicalId": "1::513::16384",
+      "generic_type" : "THERMOSTAT_SETPOINT",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    },
+    {
+      "name": "Consigne maximum",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "unite" : "°C",
+      "logicalId": "1::513::16385",
+      "generic_type" : "THERMOSTAT_SETPOINT",
+      "configuration" : {
+        "calculValueOffset":"#value# / 10"
+      }
+    },
+    {
+      "name": "Thermostat",
+      "type": "action",
+      "subtype": "slider",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "unite" : "°C",
+      "value": "Consigne",
+      "logicalId": "attributes::1::in::513::18::#slider#*100",
+      "generic_type" : "THERMOSTAT_SET_SETPOINT",
+      "configuration" : {
+        "minValue":"6",
+        "maxValue":"28"
+      },
+      "template" : {
+        "dashboard" : "button",
+        "mobile" : "button"
+      }
+    },
+    {
+      "name": "Thermostat mode eco",
+      "type": "action",
+      "subtype": "slider",
+      "isVisible": 0,
+      "isHistorized": 1,
+      "unite" : "°C",
+      "value": "Temperature mode eco",
+      "logicalId": "attributes::1::in::513::16384::#slider#*100",
+      "configuration" : {
+        "minValue":"6",
+        "maxValue":"28"
+      },
+      "template" : {
+        "dashboard" : "button",
+        "mobile" : "button"
+      }
+    },
+    {
+      "name": "Thermostat maximum",
+      "type": "action",
+      "subtype": "slider",
+      "isVisible": 0,
+      "isHistorized": 1,
+      "unite" : "°C",
+      "value": "Consigne maximum",
+      "logicalId": "attributes::1::in::513::16385::#slider#*100",
+      "configuration" : {
+        "minValue":"6",
+        "maxValue":"28"
+      },
+      "template" : {
+        "dashboard" : "button",
+        "mobile" : "button"
+      }
+    },
+    {
+      "name": "Mode",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "generic_type" : "THERMOSTAT_STATE_NAME",
+      "logicalId": "1::513::30"
+    },
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::513::41"
+    }
+  ]
+}

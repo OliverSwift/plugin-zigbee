@@ -1,0 +1,38 @@
+{
+  "name": "MIJIA - Interrupteur sans fil intelligent",
+  "ref" : "YTC4040GL",
+  "buylink" : "",
+  "type": "Interrupteur,Télécommande",
+  "commands": [
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::6::0"
+    },
+    {
+      "name": "Type",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::6::event::attribute",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Event",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::6::event::click::click_type",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

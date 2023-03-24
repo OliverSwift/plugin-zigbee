@@ -1,0 +1,51 @@
+{
+  "name": "Clavier intelligent",
+  "ref" : "KEPZB-110",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5537-frient-clavier-a-codes-intelligent-zigbee-30-lecteur-rfid-5713594002415.html?domid=4&id_campaign=9",
+  "manufacturer" : "Frient",
+  "pairing": "Inserez les piles",
+  "reset": "Appuyer sur le bouton jusqu'a ce que la led clignote rouge",
+  "remark" : "Pour la commande Info SOS la signification est : 2 SOS (appui long sur le bouton), 7 quelqu'un a passé la devant le clavier",
+  "configuration" :{
+    "deviceSpecific":{
+      "poll_control":{
+        "long_poll":"1160"
+      }
+    }
+  },
+  "commands": [
+    {
+      "name": "Code",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "44::1281::cmd::1.1",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Commande",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "44::1281::cmd::1",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "SOS",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "44::1281::cmd::0",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

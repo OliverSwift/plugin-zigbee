@@ -1,0 +1,164 @@
+{
+    "name": "OWON - COMPTEUR DE CONSOMMATION ÉLECTRIQUE - 3 PINCES AMPÈREMÉTRIQUES MONOPHASÉE / TRIPHASÉE ZIGBEE - 80A",
+    "ref": "PC321-80A",
+    "reset": "",
+    "pairing": "",
+    "remark": "",
+    "documentation": "https://www.owon-smart.com/uploads/Quick-Start-Guide-PC321-Power-Clamp.pdf",
+    "buylink": "https://www.domadoo.fr/fr/peripheriques/6057-owon-compteur-de-consommation-electrique-3-pinces-amperemetriques-monophasee-triphasee-zigbee-80a.html?domid=4&id_campaign=9",
+    "commands": [
+      {
+        "name": "Consommation Cumulée Totale",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "W",
+        "logicalId": "1::1794::0"
+      },
+      {
+        "name": "Puissance totale",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "W",
+        "logicalId": "1::1794::1024"
+      },
+      {
+        "name": "Puissance L1",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "W",
+        "logicalId": "1::1794::8192"
+      },
+      {
+        "name": "Puissance L2",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "W",
+        "logicalId": "1::1794::8193"
+      },
+      {
+        "name": "Puissance L3",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "W",
+        "logicalId": "1::1794::8194"
+      },
+      {
+        "name": "Tension L1",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "V",
+        "logicalId": "1::1794::12288",
+        "configuration" : {
+          "calculValueOffset":"#value# / 10"
+        }
+      },
+      {
+        "name": "Tension L2",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "V",
+        "logicalId": "1::1794::12289",
+        "configuration" : {
+          "calculValueOffset":"#value# / 10"
+        }
+      },
+      {
+        "name": "Tension L3",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "V",
+        "logicalId": "1::1794::12290",
+        "configuration" : {
+          "calculValueOffset":"#value# / 10"
+        }
+      },
+      {
+        "name": "Consommation cumulée L1",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "w",
+        "logicalId": "1::1794::16384"
+      },
+      {
+        "name": "Consommation cumulée L2",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "W",
+        "logicalId": "1::1794::16385"
+      },
+      {
+        "name": "Consommation cumulée L3",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 1,
+        "isHistorized": 0,
+        "unite" : "W",
+        "logicalId": "1::1794::16386"
+      },
+       {
+        "name": "Intensite L1",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 0,
+        "isHistorized": 0,
+        "unite" : "A",
+        "logicalId": "1::1794::12544",
+        "configuration" : {
+          "calculValueOffset":"#value# / 1000"
+        }     
+      },
+       {
+        "name": "Intensite L2",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 0,
+        "isHistorized": 0,
+        "unite" : "A",
+        "logicalId": "1::1794::12545",
+        "configuration" : {
+          "calculValueOffset":"#value# / 1000"
+        }
+      },
+      {
+        "name": "Intensite L3",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 0,     
+        "isHistorized": 0,
+        "unite" : "A",
+        "logicalId": "1::1794::12546",
+        "configuration" : {
+          "calculValueOffset":"#value# / 1000"
+        }
+      },
+      {
+        "name": "Courant Fuite",
+        "type": "info",
+        "subtype": "numeric",
+        "isVisible": 0,
+        "isHistorized": 0,
+        "unite" : "A",
+        "logicalId": "1::1794::12548"
+      }   
+    ]
+  }

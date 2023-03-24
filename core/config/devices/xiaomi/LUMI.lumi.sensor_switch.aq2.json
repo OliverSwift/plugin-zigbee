@@ -1,0 +1,32 @@
+{
+  "name": "AQARA - Interrupteur sans fil intelligent (REV2)",
+  "ref" : "WXKG11LM Rev.2",
+  "type": "Télécommande,Interrupteur",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/4669-aqara-interrupteur-sans-fil-intelligent-zigbee-192784000052.html",
+  "reset" : "Appuyer pendant 10s le sur bouton du module",
+  "pairing":"Appuyer pendant 5s le sur bouton du module",
+  "configuration" : {
+    "battery_type" : "1x3V CR2032"
+  },
+  "commands": [
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::6::0"
+    },
+    {
+      "name": "Etat multiples",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::6::32768",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

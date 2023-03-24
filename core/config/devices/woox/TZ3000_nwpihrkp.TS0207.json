@@ -1,0 +1,28 @@
+{
+  "name": "Détecteur d'inondation intelligent",
+  "ref" : "R7050",
+  "buylink" : "",
+  "reset" : "",
+  "pairing" : "Maintenir appuyé 5 secondes le bouton reset jusqu'au clignotement de la LED",
+  "commands": [
+    {
+      "name": "Inondation",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1280::cmd::1",
+      "generic_type": "FLOOD",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "display": {
+        "invertBinary" : 1
+      },
+      "template":{
+        "dashboard" : "flood",
+        "mobile" : "flood"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Commande scène",
+  "remark" : "Ne peut etre appairé que sur le canal 11",
+  "buylink" : "",
+  "ref" : "064884",
+  "commands": [
+    {
+      "name": "Scène",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::5::cmd::5"
+    }
+  ]
+}

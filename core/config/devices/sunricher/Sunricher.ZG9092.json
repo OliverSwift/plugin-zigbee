@@ -1,0 +1,202 @@
+{
+    "name": "Sunricher thermostat",
+    "ref":"ZG9092",
+    "commands": [
+        {
+            "logicalId": "1::513::0",
+            "generic_type": "THERMOSTAT_TEMPERATURE",
+            "name": "Température",
+            "type": "info",
+            "subType": "numeric",
+            "isHistorized": "1",
+            "unite": "°C",
+            "configuration": {
+                "repeatEventManagement": "never",
+                "calculValueOffset": "#value# \/ 100",
+                "historizeRound": "1"
+            },
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "1::513::18",
+            "generic_type": "THERMOSTAT_SETPOINT",
+            "name": "Consigne ",
+            "type": "info",
+            "subType": "numeric",
+            "isHistorized": "0",
+            "unite": "°C",
+            "configuration": {
+                "calculValueOffset": "#value# \/ 100"
+            },
+            "isVisible": "0"
+        },
+        {
+            "logicalId": "attributes::1::in::513::18::#slider#*100",
+            "generic_type": "THERMOSTAT_SET_SETPOINT",
+            "name": "Regalge consigne",
+            "type": "action",
+            "subType": "slider",
+            "isHistorized": "0",
+            "unite": "°C",
+            "configuration": {
+                "minValue": "6",
+                "maxValue": "28"
+            },
+            "template": {
+                "dashboard": "core::button",
+                "mobile": "core::button"
+            },
+            "value": "Consigne ",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "1::513::20",
+            "name": "Consigne Hors Gel",
+            "type": "info",
+            "subType": "numeric",
+            "isHistorized": "1",
+            "configuration": {
+                "calculValueOffset": "#value# \/ 100",
+                "repeatEventManagement": "never"
+            },
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "1::513::8194",
+            "name": "Etat Hors Gel",
+            "type": "info",
+            "subType": "string",
+            "isHistorized": "1",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "attributes::1::in::513::20::#slider#",
+            "name": "Réglage Consigne Hors Gel",
+            "type": "action",
+            "subType": "slider",
+            "isHistorized": "0",
+            "configuration": {
+                "minValue": "0",
+                "maxValue": "15",
+                "calculValueOffset": "#value#*100"
+            },
+            "value": "Consigne Hors Gel",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "1::513::28",
+            "generic_type": "THERMOSTAT_STATE_NAME",
+            "name": "Mode ",
+            "type": "info",
+            "subType": "string",
+            "isHistorized": "0",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "attributes::1::in::513::28::0",
+            "name": "Arrêt",
+            "type": "action",
+            "subType": "other",
+            "isHistorized": "0",
+            "value": "Mode ",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "attributes::1::in::513::28::1",
+            "name": "Auto",
+            "type": "action",
+            "subType": "other",
+            "isHistorized": "0",
+            "value": "Mode ",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "attributes::1::in::513::28::4",
+            "name": "Manu",
+            "type": "action",
+            "subType": "other",
+            "isHistorized": "0",
+            "value": "Mode ",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "attributes::1::in::513::28::8",
+            "name": "Dry",
+            "type": "action",
+            "subType": "other",
+            "isHistorized": "0",
+            "value": "Mode ",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "attributes::1::in::513::8194::1",
+            "name": "Hors Gel",
+            "type": "action",
+            "subType": "other",
+            "isHistorized": "0",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "1::513::41",
+            "name": "Etat Chauffage",
+            "type": "info",
+            "subType": "binary",
+            "isHistorized": "1",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "1::513::16",
+            "name": "Etat Compensation",
+            "type": "info",
+            "subType": "numeric",
+            "isHistorized": "0",
+            "unite": "°C",
+            "configuration": {
+                "minValue": "-30",
+                "maxValue": "30"
+            },
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "attributes::1::in::513::16::#slider#",
+            "name": "Compensation",
+            "type": "action",
+            "subType": "slider",
+            "isHistorized": "0",
+            "configuration": {
+                "minValue": "-30",
+                "maxValue": "30"
+            },
+            "value": "Etat Compensation",
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "1::2820::1291",
+            "generic_type": "POWER",
+            "name": "Puissance ",
+            "type": "info",
+            "subType": "numeric",
+            "isHistorized": "1",
+            "unite": "W",
+            "configuration": {
+                "historizeRound": 2,
+                "calculValueOffset": "#value# \/ 10"
+            },
+            "isVisible": "1"
+        },
+        {
+            "logicalId": "1::1794::0",
+            "generic_type": "CONSUMPTION",
+            "name": "Consommation",
+            "type": "info",
+            "subType": "numeric",
+            "isHistorized": "1",
+            "unite": "kWh",
+            "configuration": {
+                "historizeRound": 2,
+                "calculValueOffset": "#value# \/ 1000"
+            },
+            "isVisible": "1"
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+  "name": "AQARA - Capteur de vibration",
+  "ref" : "DJT11LM",
+  "type": "Détecteur,Porte,Vibration",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/4667-xiaomi-capteur-de-vibration-zigbee-aqara-192784000113.html",
+  "reset" : "Appuyer pendant 10s le sur bouton du module",
+  "pairing":"Appuyer pendant 5s le sur bouton du module",
+  "configuration" : {
+    "battery_type" : "1x3V CR2032"
+  },
+  "config" : [
+    {"endpoint" : 1,"cluster":0,"attribute":65293,"manufacturer":4447,"name":"Sensibilité","type":"number","min" : 0 ,"max":21}
+  ],
+  "commands": [
+    {
+      "name": "Evènement",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::257::85"
+    },
+    {
+      "name": "Vibration",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::257::0"
+    },
+    {
+      "name": "Inclinaison",
+      "type": "info",
+      "subtype": "numeric",
+      "unite":"°",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::257::1283",
+      "template": {
+        "dashboard": "line",
+        "mobile": "line"
+      }
+    },
+    {
+      "name": "Orientation",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::257::1288",
+      "template": {
+        "dashboard": "line",
+        "mobile": "line"
+      },
+      "configuration" : {
+        "calculValueOffset":"#value# / 10000000000",
+        "historizeRound":""
+      }
+    },
+    {
+      "name": "Niveau de vibration",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::257::1285",
+      "template": {
+        "dashboard": "line",
+        "mobile": "line"
+      },
+      "configuration" : {
+        "calculValueOffset":"#value# / 65536"
+      }
+    },
+    {
+      "name": "Porte",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1280::cmd::1",
+      "generic_type": "OPENING",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "template" : {
+        "dashboard" : "window",
+        "mobile" : "window"
+      }
+    }
+  ]
+}

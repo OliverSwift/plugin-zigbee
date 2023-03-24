@@ -1,0 +1,44 @@
+{
+  "name": "AQARA - Détecteur de mouvement intelligent v2",
+  "ref" : "RTCGQ11LM",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/4518-xiaomi-detecteur-de-mouvement-zigbee-aqara-192784000090.html",
+  "reset" : "Il faut presser pendant 10s le bouton du module",
+  "pairing":"Il faut presser pendant 5s le bouton du module",
+  "commands": [
+    {
+      "name": "Présence",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1280::cmd::1",
+      "generic_type": "PRESENCE",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "display": {
+        "invertBinary" : 1
+      },
+      "template" : {
+        "dashboard" : "presence",
+        "mobile" : "presence"
+      }
+    },
+    {
+      "name": "Luminosité",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1024::0",
+      "generic_type": "BRIGHTNESS",
+      "display": {
+        "invertBinary" : 1
+      },
+      "configuration":{
+        "historizeRound" : 2,
+        "calculValueOffset":"10**((#value#-1)/10000)"
+      }
+    }
+  ]
+}

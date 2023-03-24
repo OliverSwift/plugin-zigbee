@@ -1,0 +1,61 @@
+{
+  "name": "Micromodule commutateur 10A",
+  "ref" : "BASICZBR3",
+  "type": "Contacteur",
+  "buylink": "https://www.domadoo.fr/fr/peripheriques/5258-sonoff-module-commutateur-10a-zigbee-30.html",
+  "remark": "",
+  "documentation": "http://dl.itead.cc/basiczbr3/BASICZBR3-user-manual-V-1-1.pdf",
+  "reset": "Appui maintenu de 5 secondes sur le bouton de configuration",
+  "pairing": "Une fois alimenté le module entre en mode appairage",
+  "commands": [
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "ENERGY_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::6::0"
+    },
+    {
+      "name": "On",
+      "generic_type": "ENERGY_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "1::on_off::on",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Off",
+      "generic_type": "ENERGY_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "1::on_off::off",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Toggle",
+      "generic_type": "LIGHT_TOGGLE",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::on_off::toggle",
+      "display": {
+        "icon": "<i class=\"fas fa-random\"></i>"
+      }
+    }
+  ]
+}

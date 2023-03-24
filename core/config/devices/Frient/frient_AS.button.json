@@ -1,0 +1,29 @@
+{
+  "name": "Smart button",
+  "ref" : "20203200",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5808-frient-bouton-intelligent-zigbee-30.html?domid=4&id_campaign=9",
+  "manufacturer" : "Frient",
+  "type": "Télécommande,Bouton",
+  "pairing": "Inserez les piles",
+  "reset": "Appuyer sur le bouton jusqu'a ce que la led clignote rouge",
+  "configuration" :{
+    "deviceSpecific":{
+      "poll_control":{
+        "long_poll":"1160"
+      }
+    }
+  },
+  "commands": [
+    {
+      "name": "Bouton",
+      "type": "info",
+      "subtype": "binarry",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "32::15::85",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

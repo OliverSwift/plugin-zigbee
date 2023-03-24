@@ -1,0 +1,70 @@
+{
+  "name": "Prise connectée ON/OFF",
+  "ref" : "TS011F",
+  "buylink" : "",
+  "reset" : "",
+  "pairing" : "",
+  "config" : [
+    {"endpoint":11,"cluster":6,"attribute":32769,"name":"Light mode","type":"select","values":[
+      {"value":0,"name":"Led disabled"},
+      {"value":1,"name":"Led enabled"},
+      {"value":2,"name":"Led enabled but inverted"}
+    ]},
+    {"endpoint":11,"cluster":6,"attribute":32770,"name":"Power on state","type":"select","values":[
+      {"value":0,"name":"Off"},
+      {"value":1,"name":"On"},
+      {"value":2,"name":"Last state"}
+    ]}
+  ],
+  "commands": [
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "LIGHT_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "11::6::0"
+    },
+    {
+      "name": "On",
+      "generic_type": "LIGHT_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "11::on_off::on",
+      "template":{
+        "dashboard" : "prise",
+        "mobile" : "prise"
+      }
+    },
+    {
+      "name": "Off",
+      "generic_type": "LIGHT_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "11::on_off::off",
+      "template":{
+        "dashboard" : "prise",
+        "mobile" : "prise"
+      }
+    },
+    {
+      "name": "Toggle",
+      "generic_type": "LIGHT_TOGGLE",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "11::on_off::toggle",
+      "display": {
+        "icon": "<i class=\"fas fa-random\"></i>"
+      }
+    }
+  ]
+}

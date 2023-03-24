@@ -1,0 +1,28 @@
+{
+  "name": "Wiser Window/Door Sensor",
+  "ref" : "CCT591011_AS",
+  "type": "Ouverture",
+  "buylink" : "",
+  "remark" : "",
+  "reset" : "Presser 3 fois en moins d'une seconde le bouton puis le maintenir appuyé pendant 10s au moins. La led doit clignoter rouge",
+  "pairing" : "Presser 3 fois le bouton",
+  "documentation": "https:\/\/download.schneider-electric.com\/files?p_enDocType=User+guide&p_File_Name=MFR1569800.pdf&p_Doc_Ref=MFR1569800",
+  "commands": [
+    {
+      "name": "Ouverture",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1280::cmd::1",
+      "generic_type": "OPENING",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "template" : {
+        "dashboard" : "window",
+        "mobile" : "window"
+      }
+    }
+  ]
+}

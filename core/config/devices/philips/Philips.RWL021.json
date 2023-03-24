@@ -1,0 +1,29 @@
+{
+  "name": "Télécommande 4 boutons",
+  "ref" : "RWL021",
+  "buylink" : "",
+  "commands": [
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "2::64512::cmd::1",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Type",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "2::64512::cmd::1.2",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

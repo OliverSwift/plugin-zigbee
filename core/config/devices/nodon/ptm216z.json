@@ -1,0 +1,35 @@
+{
+  "name": "Interrupteur mural Zigbee compatible Philips Hue",
+  "ref" : "CWS-4-1-01_HUE",
+  "manufacturer": "NodOn",
+  "type": "Interrupteur",
+  "reset": "",
+  "pairing": "",
+  "remark": "",
+  "documentation": "",
+  "buylink": "https://www.domadoo.fr/fr/peripheriques/5922-nodon-interrupteur-mural-zigbee-compatible-philips-hue-3700313924723.html?domid=4&id_campaign=9",
+  "commands": [
+    {
+      "name": "On Off",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::6::cmd::0",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Scene",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::5::cmd::1",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

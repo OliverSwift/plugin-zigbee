@@ -1,0 +1,35 @@
+{
+  "name": "Détecteur de mouvement",
+  "buylink" : "",
+  "reset" : "Appuyer sur le bouton de couplage 4 fois en moins de 5 secondes.",
+  "pairing" : "Maintenez le bouton d'appariement enfoncé pendant au moins 10 seconde",
+  "documentation" : "https:\/\/www.ikea.com\/fr\/fr\/manuals\/tradfri-wireless-motion-sensor__AA-2145280-2_pub.pdf",
+  "configuration" :{
+    "last_seen::check_mode":"ignore_poll_control",
+    "deviceSpecific":{
+      "poll_control":{
+        "long_poll":"-1"
+      }
+    }
+  },
+  "commands": [
+    {
+      "name": "Mouvement",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "logicalId": "1::6::cmd::1",
+      "generic_type": "PRESENCE",
+      "configuration" : {
+        "repeatEventManagement": "always",
+        "returnStateValue" : 1,
+        "returnStateTime" : 1
+      },
+      "template":{
+        "dashboard" : "presence",
+        "mobile" : "presence"
+      }
+    }
+  ]
+}

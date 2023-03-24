@@ -1,0 +1,88 @@
+{
+  "name": "Variateur poussoir connecté Zigbee 3.0 Wiser Odace",
+  "ref": "S520522W",
+  "manufacturer" : "Schneider",
+  "type": "Interrupteur,Variateur",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5716-schneider-electric-interrupteur-sans-fil-sans-pile-pour-eclairage-odace-sfsp-3606481019561.html",
+  "remark" : "",
+  "reset" : "Presser 3 fois en moins d'une seconde le bouton du haut puis le maintenir appuyé pendant 10s au moins (attention à ne pas dépasser 20s). La led doit clignoter rouge",
+  "pairing" : "Presser 3 fois le bouton",
+  "documentation": "https://download.schneider-electric.com/files?p_enDocType=Instruction+sheet&p_File_Name=S5x0522W_HW.pdf&p_Doc_Ref=S5x0522W_HW",
+  "commands":[
+    {
+      "name": "Etat",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "LIGHT_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "3::6::0"
+    },
+    {
+      "name": "On",
+      "generic_type": "LIGHT_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "3::on_off::on",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Off",
+      "generic_type": "LIGHT_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat",
+      "logicalId": "3::on_off::off",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Toggle",
+      "generic_type": "LIGHT_TOGGLE",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "3::on_off::toggle",
+      "display": {
+        "icon": "<i class=\"fas fa-random\"></i>"
+      }
+    },
+    {
+      "name": "Etat Luminosité",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "3::8::0",
+      "configuration" : {
+        "minValue" : 0,
+        "maxValue" : 254
+      }
+    },
+    {
+      "name": "Luminosité",
+      "type": "action",
+      "subtype": "slider",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat Luminosité",
+      "logicalId": "3::level::move_to_level::#slider#::0",
+      "generic_type": "LIGHT_SLIDER",
+      "configuration" : {
+        "minValue" : 0,
+        "maxValue" : 254
+      }
+    }
+  ]
+}

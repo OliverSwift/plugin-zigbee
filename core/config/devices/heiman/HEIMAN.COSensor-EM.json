@@ -1,0 +1,27 @@
+{
+  "name": "Détecteur de monoxyde de carbone",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5884-heiman-capteur-co-monoxyde-de-carbone-zigbee-30.html?domid=4&id_campaign=9",
+  "ref" : "HS1SA",
+  "buylink" : "",
+  "configuration" :{
+    "deviceSpecific":{
+      "poll_control":{
+        "long_poll":"1160"
+      }
+    }
+  },
+  "commands": [
+    {
+      "name": "CO",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "logicalId": "1::1280::cmd::1",
+      "generic_type": "CO",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

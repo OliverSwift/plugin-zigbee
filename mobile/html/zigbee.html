@@ -1,0 +1,20 @@
+<div id="div_inclusionAlert" style="text-align: center;font-size: 2em;"></div>
+<div class="ui-grid-a" id="div_includeButton">
+	
+</div>
+
+<div id="div_configIncludeDevice" style="display:none;max-width:100% !important;margin:10px;padding:10px;" class="nd2-card">
+	<h3 class="card-primary-title">{{Nouveau module inclus, configuration : }}</h3>
+	<span class="eqLogicAttr" data-l1key="id" style="display : none;"></span>
+	<label for="un" class="ui-hidden-accessible">Nom</label>
+	<input type="text" placeholder="{{Nom}}" class="eqLogicAttr" data-l1key="name">
+	<select class="eqLogicAttr" data-l1key="object_id"></select>
+	<center>
+		<a class="ui-btn ui-btn-raised clr-primary waves-effect waves-button" id="bt_validateConfigDevice" style="width:200px;">{{Valider}}</a>
+	</center>
+</div>
+<center><video id="qr-video" style="max-height:500px;"></video></center>
+
+<script src="core/php/getJS.php?file=plugins/zigbee/3rdparty/qr-scanner/qr-scanner.umd.min.js"></script>
+<script src="core/php/getJS.php?file=plugins/zigbee/core/js/zigbee.class.js"></script>
+<script src="core/php/getJS.php?file=plugins/zigbee/mobile/js/zigbee.js"></script>

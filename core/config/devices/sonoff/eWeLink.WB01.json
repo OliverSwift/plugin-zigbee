@@ -1,0 +1,25 @@
+{
+  "name": "Interrupteur connecté sans fil",
+  "ref" : "SNZB-01",
+  "type": "Interrupteur,Télécommande",
+  "reset": "Retirer puis remettre la pile, puis maintenir appuyé le bouton Reset pendant 10 secondes",
+  "pairing": "Maintenir appuyé le bouton Reset pendant 5 secondes",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5259-sonoff-interrupteur-sans-fil-zigbee-30.html",
+  "documentation": "http://dl.itead.cc/SNZB-01/Instructions/SNZB-01_V1.0_User_manual_20201116.pdf",
+  "configuration" : {
+    "battery_type" : "1x3V CR2450"
+  },
+  "commands": [
+    {
+      "name": "Bouton",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::6::cmd::0",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

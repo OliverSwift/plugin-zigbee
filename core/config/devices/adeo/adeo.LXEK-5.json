@@ -1,0 +1,39 @@
+{
+  "name": "LEXMAN ENKI - Télécommande pour ampoules connectées RGB",
+  "ref" : "HR-C99C-Z-C045",
+  "buylink" : "",
+  "commands": [
+    {
+      "name": "On Off",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::6::cmd::0"
+    },
+    {
+      "name": "Luminosité",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::8::cmd::1"
+    },
+    {
+      "name": "Couleur",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::768::cmd::color"
+    },
+    {
+      "name": "Température couleur",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::768::cmd::colorTemperature"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "MIJIA - Serrure connectée",
+  "ref" : "ZYJ75-40/35",
+  "type": "Serrure",
+  "buylink" : "",
+  "reset" : "",
+  "pairing":"",
+  "configuration" : {
+     "battery_type" : "3x1.5V LR01"
+    },
+  "commands": [
+    {
+      "name": "Clef",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::0::65328"
+    }
+  ]
+}

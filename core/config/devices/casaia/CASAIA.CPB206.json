@@ -1,0 +1,15 @@
+{
+  "name": "Bouton SOS",
+  "ref" : "CPB-206",
+  "reset" : "",
+  "commands": [
+    {
+      "name": "Bouton",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "logicalId": "1::1280::cmd::1"
+    }
+  ]
+}

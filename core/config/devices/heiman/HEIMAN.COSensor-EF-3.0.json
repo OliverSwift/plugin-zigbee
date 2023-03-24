@@ -1,0 +1,19 @@
+{
+"name": "Smart Carbon Monoxide Sensor",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5884-heiman-capteur-co-monoxyde-de-carbone-zigbee-30.html?domid=4&id_campaign=9",
+  "ref" : "HS1CA",
+  "documentation" : "",
+  "commands": [
+    {
+      "name": "CO",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "logicalId": "1::1280::cmd::1",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

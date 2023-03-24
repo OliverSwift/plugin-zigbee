@@ -1,0 +1,22 @@
+{
+  "name": "Sonnette connectée",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5717-heiman-bouton-de-sonnette-intelligent-zigbee-sans-carillon.html?domid=4&id_campaign=9",
+  "ref" : "HS2DB-E",
+  "buylink" : "",
+  "remark" : "",
+  "reset" : "",
+  "pairing" : "",
+  "commands": [
+    {
+      "name": "Sonnette",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1280::cmd::1",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

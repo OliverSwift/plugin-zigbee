@@ -1,0 +1,54 @@
+{
+  "name": "Détecteur de fumée intelligent DIN EN 14604 ET DIN 14676",
+  "ref" : "20209600",
+  "buylink":"https://www.domadoo.fr/fr/peripheriques/5409-frient-detecteur-de-fumee-intelligent-zigbee-30-5713594002330.html",
+  "reset" : "Presser le bouton jusqu'a ce que le module clignote",
+  "pairing":"Il faut enlever remettre la pile dans le module",
+  "commands": [
+    {
+      "name": "Fumée",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "35::15::85",
+      "generic_type": "SMOKE",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "template":{
+        "dashboard" : "heat",
+        "mobile" : "heat"
+      }
+    },
+    {
+      "name": "Sirene On",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "35::ias_wd::start_warning::1::0::3::240::0::0"
+    },
+    {
+      "name": "Sirene Off",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "35::ias_wd::start_warning::0::0::0::0::0::0"
+    },
+    {
+      "name": "Température",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "38::1026::0",
+      "unite" : "°C",
+      "generic_type": "TEMPERATURE",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "name": "Multi-functional Relay",
+  "ref" : "CM10ZW",
+  "type": "Contacteur",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5340-orvibo-module-commutateur-contact-sec-zigbee.html",
+  "reset" : "Presser le bouton 5 fois et laisser appuyer la 5eme fois jusqu'à clignottement très rapide de la diode bleue",
+  "pairing" : "Automatique dès lors que le device n'est pas déjà appairé, cf reset au dessus. Code diode bleue : très rapide : pas de reseau, toutes les 1s : recherche reseau, toutes les 2s : appairage en cours, aucun : appairage OK",
+  "remark" : "Au 15/12/2020, retour d'etat non fonctionnel",
+  "documentation": "https://www.domadoo.fr/fr/index.php?controller=attachment&id_attachment=2461",
+  "commands": [
+    {
+      "name": "Etat 1",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "ENERGY_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "1::6::0"
+    },
+    {
+      "name": "On 1",
+      "generic_type": "ENERGY_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 1",
+      "logicalId": "1::on_off::on",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Off 1",
+      "generic_type": "ENERGY_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 1",
+      "logicalId": "1::on_off::off",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Etat 2",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "ENERGY_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "2::6::0"
+    },
+    {
+      "name": "On 2",
+      "generic_type": "ENERGY_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 2",
+      "logicalId": "2::on_off::on",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Off 2",
+      "generic_type": "ENERGY_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 2",
+      "logicalId": "2::on_off::off",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Etat 3",
+      "type": "info",
+      "subtype": "binary",
+      "generic_type": "ENERGY_STATE",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "logicalId": "3::6::0"
+    },
+    {
+      "name": "On 3",
+      "generic_type": "ENERGY_ON",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 3",
+      "logicalId": "3::on_off::on",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    },
+    {
+      "name": "Off 3",
+      "generic_type": "ENERGY_OFF",
+      "type": "action",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "value" : "Etat 3",
+      "logicalId": "3::on_off::off",
+      "template":{
+        "dashboard" : "light",
+        "mobile" : "light"
+      }
+    }
+  ]
+}

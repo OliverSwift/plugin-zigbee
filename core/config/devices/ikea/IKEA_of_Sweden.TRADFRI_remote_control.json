@@ -1,0 +1,74 @@
+{
+  "name": "Télécommande 5 boutons",
+  "reset" : "Appuyer sur le bouton de couplage 4 fois en moins de 5 secondes.",
+  "pairing" : "Maintenez le bouton d'appariement enfoncé pendant au moins 10 seconde",
+  "remark" : "",
+  "type" : "Télécommande",
+  "documentation" : "https:\/\/www.ikea.com\/fr\/fr\/manuals\/tradfri-remote-control__AA-2144014-1_pub.pdf",
+  "buylink" : "",
+  "configuration" :{
+    "last_seen::check_mode":"disable",
+    "deviceSpecific":{
+      "poll_control":{
+        "long_poll":"-1"
+      }
+    }
+  },
+  "commands": [
+    {
+      "name": "Bouton 1",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::6::cmd::0",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Bouton 2",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::8::cmd::1",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Bouton 2 mode",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::8::cmd::0",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Bouton 3",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::5::cmd::7",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Bouton 3 long press",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::5::cmd::8",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

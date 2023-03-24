@@ -1,0 +1,33 @@
+{
+  "name": "Bouton SOS",
+  "ref" : "R7052",
+  "manufacturer": "Woox",
+  "type": "Bouton,Télécommande",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5683-woox-bouton-d-urgence-sos-zigbee-30-8435606701112.html",
+  "reset" : "",
+  "pairing" : "Maintenir appuyé 5 secondes le bouton reset jusqu'au clignotement de la LED",
+  "commands": [
+    {
+      "name": "Bouton 1",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "logicalId": "1::1281::cmd::0",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    },
+    {
+      "name": "Bouton 2",
+      "type": "info",
+      "subtype": "other",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "logicalId": "1::1281::cmd::1",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

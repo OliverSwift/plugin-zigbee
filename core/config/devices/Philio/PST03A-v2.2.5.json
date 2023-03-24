@@ -1,0 +1,69 @@
+{
+  "name": "4 in 1 Multi sensor",
+  "ref" : "PST03-A",
+  "buylink" : "",
+  "remark" : "",
+  "commands": [
+    {
+      "name": "Présence",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1280::cmd::1",
+      "generic_type": "PRESENCE",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "display": {
+        "invertBinary" : 1
+      },
+      "template" : {
+        "dashboard" : "presence",
+        "mobile" : "presence"
+      }
+    },
+    {
+      "name": "Ouverture",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "2::1280::cmd::1",
+      "generic_type": "OPENING",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "template" : {
+        "dashboard" : "window",
+        "mobile" : "window"
+      }
+    },
+    {
+      "name": "Température",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1026::0",
+      "unite" : "°C",
+      "generic_type": "TEMPERATURE",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    },
+    {
+      "name": "Luminosité",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1024::0",
+      "generic_type": "BRIGHTNESS",
+      "configuration":{
+        "historizeRound" : 2,
+        "calculValueOffset":"10**((#value#-1)/10000)"
+      }
+    }
+  ]
+}

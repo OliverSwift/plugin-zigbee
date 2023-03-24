@@ -1,0 +1,82 @@
+{
+	"name": "Variateur",
+	"ref" : "ROM001",
+	"buylink" : "",
+	"reset" : "Il faut utiliser la fonction reset touchlink. Voir <a target='_blank' href='https://doc.jeedom.com/fr_FR/plugins/automation%20protocol/zigbee/#Touchlink'>ici</a>",
+	"pairing" : "Faire un reset de l'ampoule, puis passer votre réseaux Zigbee en mode inclusion l'ampoule devrait s'appairer toute seule (un on/off sera peut être nécessaire)",
+	"commands": [
+		{
+			"name": "Etat",
+			"type": "info",
+			"subtype": "binary",
+			"generic_type": "LIGHT_STATE",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"logicalId": "1::64512::cmd::1"
+		},
+		{
+			"name": "Appui",
+			"type": "info",
+			"subtype": "binary",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"logicalId": "1::64512::event::on_press::command_id"
+		},
+		{
+			"name": "Appui court",
+			"type": "info",
+			"subtype": "binary",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"logicalId": "1::64512::event::on_short_release::command_id"
+		},
+		{
+			"name": "Appui long",
+			"type": "info",
+			"subtype": "binary",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"logicalId": "1::64512::event::on_long_release::command_id"
+		},
+		{
+			"name": "Double appui",
+			"type": "info",
+			"subtype": "binary",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"logicalId": "1::64512::event::on_double_press::command_id"
+		},
+		{
+			"name": "Triple appui",
+			"type": "info",
+			"subtype": "binary",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"logicalId": "1::64512::event::on_triple_press::command_id"
+		},
+		{
+			"name": "Quadruple appui",
+			"type": "info",
+			"subtype": "binary",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"logicalId": "1::64512::event::on_quadruple_press::command_id"
+		},	
+		{
+			"name": "Quintuple appui",
+			"type": "info",
+			"subtype": "binary",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"logicalId": "1::64512::event::on_quintuple_press::command_id"
+		},
+		{
+			"name": "Maintien",
+			"type": "info",
+			"subtype": "binary",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"logicalId": "1::64512::event::on_hold::command_id"
+		}
+	]
+}

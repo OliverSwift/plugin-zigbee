@@ -1,0 +1,48 @@
+{
+  "name": "AQARA - Capteur de température/pression/humidité",
+  "ref" : "WSDCGQ11LM",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/4515-aqara-capteur-de-temperature-et-d-humidite-zigbee-6970504212510.html",
+  "reset" : "Il faut presser pendant 10s le bouton du module",
+  "pairing":"Il faut presser pendant 5s le bouton du module",
+  "configuration" : {
+    "battery_type" : "1x3V CR2032"
+  },
+  "commands": [
+    {
+      "name": "Humidité",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1029::0",
+      "unite" : "%",
+      "generic_type": "HUMIDITY",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    },
+    {
+      "name": "Température",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1026::0",
+      "unite" : "°C",
+      "generic_type": "TEMPERATURE",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    },
+    {
+      "name": "Pression",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1027::0",
+      "unite" : "hPA",
+      "generic_type": "PRESSURE"
+    }
+  ]
+}

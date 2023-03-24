@@ -1,0 +1,11 @@
+--- application.py      2021-05-18 09:51:36.011928845 +0200
++++ /usr/local/lib/python3.7/dist-packages/bellows/zigbee/application.py        2021-05-18 09:52:19.924839236 +0200
+@@ -230,6 +230,8 @@
+             self._handle_reset_request(*args)
+         elif frame_name == "idConflictHandler":
+             self._handle_id_conflict(*args)
++        elif frame_name == "gpepIncomingMessageHandler":
++            self.listener_event("zgp_frame", 'bellows',*args)
+
+     def _handle_frame(
+         self,

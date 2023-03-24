@@ -1,0 +1,112 @@
+{
+  "name": "Actionneur pour radiateur électrique Wiser",
+  "ref":"CCTFR6700",
+  "buylink" : "https://www.domadoo.fr/fr/chauffage-clim/5498-schneider-electric-actionneur-pour-radiateur-electrique-fil-pilote-zigbee-30-wiser-3606481914705.html",
+  "reset": "Appuyer sur le bouton et le maintenir enfoncé pendant plus de 20 secondes jusqu'à ce que la LED arrête de clignoter rouge",
+  "pairing": "Appuyer sur le bouton pendant plus de 2 secondes",
+  "config" : [
+    {"endpoint" : 1,"cluster":65315,"attribute":49, "name":"Command Type","type":"select","values":
+      [
+        {"value":1,"name":"Contactor"},
+        {"value":3,"name":"Fil Pilot"}
+      ] 
+    } 
+  ],
+  "commands": [
+    {
+      "name": "Température",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "unite" : "°C",
+      "logicalId": "1::513::0",
+      "generic_type" : "THERMOSTAT_TEMPERATURE",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    },
+    {
+      "name": "Consigne",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 0,
+      "isHistorized": 0,
+      "unite" : "°C",
+      "logicalId": "1::513::18",
+      "generic_type" : "THERMOSTAT_SETPOINT",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    },
+    {
+      "name": "Thermostat",
+      "type": "action",
+      "subtype": "slider",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "unite" : "°C",
+      "value": "Consigne",
+      "logicalId": "attributes::1::in::513::18::#slider#*100",
+      "generic_type" : "THERMOSTAT_SET_SETPOINT",
+      "configuration" : {
+        "minValue":"6",
+        "maxValue":"28"
+      },
+      "template" : {
+        "dashboard" : "button",
+        "mobile" : "button"
+      }
+    },
+    {
+      "name": "Puissance chauffage",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "unite" : "%",
+      "logicalId": "1::513::8",
+      "configuration" : {
+        "calculValueOffset":"#value# / 255 * 100"
+      }
+    },
+    {
+      "name": "Mode",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "generic_type" : "THERMOSTAT_STATE_NAME",
+      "logicalId": "1::513::28"
+    },
+    {
+      "name": "Pilote mode",
+      "type": "info",
+      "subtype": "string",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::65315::49"
+    },
+    {
+      "name": "Puissance electrique",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "unite" : "W",
+      "logicalId": "2::1794::1024"
+    },
+    {
+      "name": "Consommation electrique",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "unite" : "kWh",
+      "logicalId": "2::1794::0",
+      "configuration" : {
+        "calculValueOffset":"#value# / 1000"
+      }
+    }
+  ]
+}

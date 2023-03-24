@@ -1,0 +1,26 @@
+{
+  "name": "Gaz sensor",
+  "ref":"SG30",
+  "type": "Capteur,Gaz",
+  "reset":"",
+  "pairing":"Presser le bouton pendant 5s",
+  "buylink" : "",
+  "commands": [
+    {
+      "name": "Gaz",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "1::1280::cmd::1",
+      "generic_type": "SMOKE",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "template":{
+        "dashboard" : "heat",
+        "mobile" : "heat"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Détecteur de gaz",
+  "ref" : "HS1CG",
+  "buylink" : "https://www.domadoo.fr/fr/peripheriques/5883-heiman-capteur-de-gaz-combustible-intelligent-zigbee-30.html?domid=4&id_campaign=9",
+  "commands": [
+    {
+      "name": "CO",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 1,
+      "logicalId": "1::1280::cmd::1",
+      "generic_type": "CO",
+      "configuration": {
+        "repeatEventManagement": "always"
+      }
+    }
+  ]
+}

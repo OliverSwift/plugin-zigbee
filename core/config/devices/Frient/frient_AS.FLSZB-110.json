@@ -1,0 +1,45 @@
+{
+  "name": "Détecteur d'inondation intelligent",
+  "ref" : "20209800",
+  "buylink":"https://www.domadoo.fr/fr/peripheriques/5427-frient-detecteur-d-inondation-zigbee-30-5713594002453.html",
+  "reset" : "Pressez le bouton jusqu'à ce que le module clignote",
+  "pairing":"Il faut enlever remettre la pile dans le module",
+  "configuration" :{
+    "deviceSpecific":{
+      "poll_control":{
+        "long_poll":"1160"
+      }
+    }
+  },
+  "commands": [
+    {
+      "name": "Inondation",
+      "type": "info",
+      "subtype": "binary",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "35::15::85",
+      "generic_type": "FLOOD",
+      "configuration": {
+        "repeatEventManagement": "always"
+      },
+      "template":{
+        "dashboard" : "flood",
+        "mobile" : "flood"
+      }
+    },
+    {
+      "name": "Température",
+      "type": "info",
+      "subtype": "numeric",
+      "isVisible": 1,
+      "isHistorized": 0,
+      "logicalId": "38::1026::0",
+      "unite" : "°C",
+      "generic_type": "TEMPERATURE",
+      "configuration" : {
+        "calculValueOffset":"#value# / 100"
+      }
+    }
+  ]
+}
