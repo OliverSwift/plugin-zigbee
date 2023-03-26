@@ -4,6 +4,8 @@ from typing import Any, Dict
 
 from zigpy.profiles import zha
 from zigpy.quirks import CustomDevice
+import zigpy.types as t
+from zigpy.zcl import foundation
 from zigpy.zcl.clusters.general import Basic, Groups, Ota, Scenes, Time
 from zigpy.zcl.clusters.measurement import RelativeHumidity, TemperatureMeasurement
 
@@ -16,9 +18,13 @@ from zhaquirks.const import (
     PROFILE_ID,
     SKIP_CONFIGURATION,
 )
-from zhaquirks.tuya import TuyaLocalCluster, TuyaPowerConfigurationCluster2AAA
+from zhaquirks.tuya import TuyaLocalCluster, TuyaManufCluster, TuyaPowerConfigurationCluster2AAA, TUYA_SET_TIME
 from zhaquirks.tuya.mcu import DPToAttributeMapping, TuyaDPType, TuyaMCUCluster
 
+import datetime
+
+class TuyaNoLengthTimePayload(t.List, item_type=t.uint8_t):
+    """Tuya payload for set_time"""
 
 class TuyaTemperatureMeasurement(TemperatureMeasurement, TuyaLocalCluster):
     """Tuya local TemperatureMeasurement cluster."""
@@ -28,6 +34,44 @@ class TuyaRelativeHumidity(RelativeHumidity, TuyaLocalCluster):
 
 class TemperatureHumidityManufCluster(TuyaMCUCluster):
     """Tuya Manufacturer Cluster with Temperature and Humidity data points."""
+
+    # Default server command is wrongly defined at TuyaMCUCluster level, override it
+    server_commands = {
+        TUYA_SET_TIME: foundation.ZCLCommandDef(
+            "set_time", {"time": TuyaNoLengthTimePayload}, False, is_manufacturer_specific=False
+        ),
+    }
+
+    """Specific set_time_request handler for this object"""
+    def handle_set_time_request(self, payload: t.uint16_t) -> foundation.Status:
+        """Handle set time cluster request."""
+        self.debug("handle_set_time_request--> payload: %s", payload)
+
+        payload_rsp = TuyaNoLengthTimePayload() # No length during serializing!!!
+
+        payload_rsp.extend(payload) #Sequence number must be the same than request one (passed as payload)
+
+        utc_now = datetime.datetime.utcnow()
+        now = datetime.datetime.now()
+
+        offset_time = datetime.datetime(self.set_time_offset, 1, 1)
+        offset_time_local = datetime.datetime(
+            self.set_time_local_offset or self.set_time_offset, 1, 1
+        )
+
+        utc_timestamp = int((utc_now - offset_time).total_seconds())
+        local_timestamp = int((now - offset_time_local).total_seconds())
+
+        payload_rsp.extend(utc_timestamp.to_bytes(4, "big", signed=False))
+        payload_rsp.extend(local_timestamp.to_bytes(4, "big", signed=False))
+
+        self.debug("handle_set_time_request--> response: %s", payload_rsp)
+
+        self.create_catching_task(
+            super().command(TUYA_SET_TIME, payload_rsp, expect_reply=False)
+        )
+
+        return foundation.Status.SUCCESS
 
     dp_to_attribute: Dict[int, DPToAttributeMapping] = {
         1: DPToAttributeMapping(
