@@ -2,41 +2,63 @@
     "name": "Neo Siren sans capteurs",
     "ref": "TZE204_t1blo2bj.TS0601",
     "config": [
+	    {"endpoint" : 1,"cluster":6,"attribute":1140,"name":"Volume","type":"select","values":[
+		    {"value":0,"name":"Bas"},
+		    {"value":1,"name":"Moyen"},
+		    {"value":2,"name":"Fort"}
+	    ]},
+	    {"endpoint" : 1,"cluster":6,"attribute":1126,"name":"Mélodie","type":"select","values":[
+		    {"value":1,"name":"Lettre à Elise"},
+		    {"value":2,"name":"Big Ben"},
+		    {"value":3,"name":"Carillon porte 1"},
+		    {"value":4,"name":"Cavalerie"},
+		    {"value":5,"name":"Marche turque"},
+		    {"value":6,"name":"Alarme alien"},
+		    {"value":7,"name":"Alarme évacuation"},
+		    {"value":8,"name":"Bip bip"},
+		    {"value":9,"name":"Biiip biiip"},
+		    {"value":10,"name":"Aboiements"},
+		    {"value":11,"name":"Police américaine"},
+		    {"value":12,"name":"Carillon zen"},
+		    {"value":13,"name":"Cabine téléphonique"},
+		    {"value":14,"name":"Pompiers américains"},
+		    {"value":15,"name":"Bip + Cloche"},
+		    {"value":16,"name":"Réveil"},
+		    {"value":17,"name":"Aigü perce tympan"},
+		    {"value":18,"name":"Carillon porte 2"}
+	    ]},
+	    {"endpoint" : 1,"cluster":6,"attribute":615,"name":"Durée en secondes","type":"number"
+	    }
     ],
     "commands": [
     {
       "name": "Etat",
+      "generic_type": "SIREN_STATE",
       "type": "info",
       "subtype": "binary",
-      "isVisible": 0,
+      "isVisible": 1,
       "isHistorized": 0,
       "logicalId": "1::6::0"
     },
     {
       "name": "On",
+      "generic_type": "SIREN_ON",
       "type": "action",
       "subtype": "other",
       "isVisible": 1,
       "isHistorized": 0,
       "value" : "Etat",
-      "logicalId": "1::on_off::on",
-      "template":{
-        "dashboard" : "prise",
-        "mobile" : "prise"
-      }
+      "logicalId": "1::on_off::on"
     },
     {
       "name": "Off",
+      "generic_type": "SIREN_OFF",
       "type": "action",
       "subtype": "other",
       "isVisible": 1,
       "isHistorized": 0,
       "value" : "Etat",
-      "logicalId": "1::on_off::off",
-      "template":{
-        "dashboard" : "prise",
-        "mobile" : "prise"
-      }
+      "logicalId": "1::on_off::off"
     }
     ]
 }
