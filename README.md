@@ -1,4 +1,4 @@
-# plugin ZIGBEE
+# plugin ZIGBEE Jeedom
 
 Ceci est une copie (légale) du plugin zigbee de Jeedom.
 En effet, la licence pour ces fichiers est GPL et AGPL et spécifie bien les attributs copyleft de la GPL.
