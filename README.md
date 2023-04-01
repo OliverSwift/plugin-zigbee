@@ -16,5 +16,8 @@ Autres points, il y a de très nombreux points de failles de sécurité qui sero
 ## QT-07S - Soil Humidity Sensor
 ![TZE200_myd45weu.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE200_myd45weu.TS0601.png)
 
-## Capteur Température et Humidité et affichage de la date
+## Capteur Température et Humidité avec Affichage de la date
 ![TZE200_locansqn.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE200_locansqn.TS0601.png)
+
+## Sirène Neo (sans capteurs)
+![TZE204_t1blo2bj.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE204_t1blo2bj.TS0601.png)
