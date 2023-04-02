@@ -13,11 +13,10 @@ Autres points, il y a de très nombreux points de failles de sécurité qui sero
 
 # Nouveaux dispositifs supportés
 
-## QT-07S - Soil Humidity Sensor
-![TZE200_myd45weu.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE200_myd45weu.TS0601.png)
+|Photo |Zigbee id | Référence/Modèle|
+|------|----------|-----------------|
+|![TZE200_myd45weu.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE200_myd45weu.TS0601.png)|TZE200_myd45weu.TS0601|QT-07S - Soil Humidity Sensor|
+|![TZE200_locansqn.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE200_locansqn.TS0601.png)|TZE200_locansqn.TS0601|Capteur Température et Humidité avec Affichage de la date|
+|![TZE204_t1blo2bj.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE204_t1blo2bj.TS0601.png)|TZE204_t1blo2bj.TS0601|Sirène Neo (sans capteurs)|
+|![TZE200_6rdj8dzm.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE200_6rdj8dzm.TS0601.png)|TZE200_6rdj8dzm.TS0601|Tête thermostatique Avatto TRV06|
 
-## Capteur Température et Humidité avec Affichage de la date
-![TZE200_locansqn.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE200_locansqn.TS0601.png)
-
-## Sirène Neo (sans capteurs)
-![TZE204_t1blo2bj.TS0601](https://raw.githubusercontent.com/OliverSwift/plugin-zigbee/master/core/config/devices/tuya/TZE204_t1blo2bj.TS0601.png)
